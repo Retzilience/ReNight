@@ -154,25 +154,6 @@ After launching, the main window will provide options to select folders, import 
 
 ---
 
-## Repository Structure
-
-After building, your repository will look like this:
-
-```
-C:\Users\retzilience\ReNight
-│
-├── build/                 # Temporary build files created by PyInstaller
-├── dist/                  # Final output directory with the executable
-│   └── ReNight.exe        # The compiled single-file executable
-├── venv/                  # Virtual environment directory (not included in version control)
-├── ReNight.ico            # Icon file for the application
-├── ReNight.pyw            # Main Python script
-├── ReNight.spec           # PyInstaller specification file
-└── requirements.txt       # Lists all required Python libraries
-```
-
----
-
 ## License
 
 This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. For more details, visit [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/).
