@@ -2,7 +2,7 @@
 
 ![ReNight Icon](imgs/ReNight.webp)
 
-ReNight (or ReNightdive Wad Manager) is a Python-based GUI application designed to help you manage DOOM WAD mods for Nightdive's 'DOOM + DOOM II' KEX 2024 sourceport. This tool provides a user-friendly interface for organizing and importing WAD files, with support for symbolic linking to save disk space.
+ReNight (or ReNightdive Wad Manager) is an opensource Python-based GUI application designed to help you manage DOOM WAD mods for Nightdive's 'DOOM + DOOM II' KEX 2024 sourceport. This tool provides a user-friendly interface for organizing and importing WAD files, with support for symbolic linking to save disk space.
 
 ---
 
