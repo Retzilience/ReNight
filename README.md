@@ -9,7 +9,7 @@ ReNight (or ReNightdive Wad Manager) is an opensource Python-based GUI applicati
 ## Features
 
 - **Nightdive Folder Selection**: Set the folder where the game loads mods from (default: Nightdive's DOOM mod directory).
-- **PWADs Folder Selection**: Choose a custom folder to store WADs, maps, and mods.
+- **PWADs Folder Selection**: Choose the folder in which you store your WADs.
 - **Symbolic Link Option**: Optionally create symbolic links for mods instead of copying, saving disk space.
 - **Batch Import**: Import multiple WADs from a folder.
 - **Console Output**: Real-time console output for user feedback and logging.
