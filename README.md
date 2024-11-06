@@ -128,7 +128,7 @@ After launching, the main window will provide options to select folders, import 
 
 ### Mod Import Options
 
-- **Pick WAD**: Allows you to select one or multiple WAD files to import.
+- **Pick WAD**: Allows you to select WAD file to import.
 - **Pick Folder (Batch)**: Select a folder containing multiple WAD files to import them all at once.
 - **Symbolic Link Option**: When checked, WADs are imported as symbolic links rather than copied to the Nightdive Folder.
 
