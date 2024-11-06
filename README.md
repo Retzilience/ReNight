@@ -43,8 +43,12 @@ ReNight or ReNightdive Wad Manager is a Python-based GUI application designed to
 #### Option 1: Download the Latest Release
 
 1. Visit the [ReNightdive Wad Manager Releases](https://github.com/Retzilience/ReNight/releases) page on GitHub.
-2. Download the latest `.exe` release file.
-3. Run the downloaded `.exe` to start the application.
+2. Download the latest release zip file: **[ReNight-v0.1.0.zip](https://github.com/Retzilience/ReNight/releases/download/v0.1.0/ReNight-v0.1.0.zip)**.
+3. Extract the contents of the zip file to a folder of your choice.
+4. Run `ReNight.exe` from the extracted folder to start the application.
+
+**Note**: The configuration file (`config.json`) will be created in the same folder as `ReNight.exe` during your first use of the application.
+
 
 #### Option 2: Build from Source
 
