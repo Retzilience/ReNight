@@ -1,5 +1,7 @@
 # ReNightdive Wad Manager
 
+![ReNight Icon](imgs/ReNight.webp)
+
 ReNight or ReNightdive Wad Manager is a Python-based GUI application designed to help you manage DOOM WAD mods for Nightdive's 'DOOM + DOOM II' KEX 2024 sourceport. This tool provides a user-friendly interface for organizing and importing WAD files, with support for symbolic linking to save disk space.
 
 ---
@@ -30,7 +32,6 @@ ReNight or ReNightdive Wad Manager is a Python-based GUI application designed to
   - [Mod Import Options](#mod-import-options)
   - [Symbolic Linking](#symbolic-linking)
 - [Usage Tips](#usage-tips)
-- [Repository Structure](#repository-structure)
 - [License](#license)
 - [Credits](#credits)
 
@@ -48,7 +49,6 @@ ReNight or ReNightdive Wad Manager is a Python-based GUI application designed to
 4. Run `ReNight.exe` from the extracted folder to start the application.
 
 **Note**: The configuration file (`config.json`) will be created in the same folder as `ReNight.exe` during your first use of the application.
-
 
 #### Option 2: Build from Source
 
@@ -139,6 +139,8 @@ After launching, the main window will provide options to select folders, import 
 - **Pick WAD**: Allows you to select one or multiple WAD files to import.
 - **Pick Folder (Batch)**: Select a folder containing multiple WAD files to import them all at once.
 - **Symbolic Link Option**: When checked, WADs are imported as symbolic links rather than copied to the Nightdive Folder.
+
+![UI](imgs/ui.png) ![Game Screenshot](imgs/game.png)
 
 ### Symbolic Linking
 
