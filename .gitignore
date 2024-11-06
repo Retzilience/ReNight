@@ -1,0 +1,13 @@
+# Ignore virtual environment
+venv/
+
+# Ignore PyInstaller build files
+build/
+dist/
+*.spec
+
+# Ignore OS-specific or IDE files
+.DS_Store
+Thumbs.db
+*.pyc
+__pycache__/
