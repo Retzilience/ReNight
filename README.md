@@ -2,7 +2,7 @@
 
 ![ReNight Icon](imgs/ReNight.webp)
 
-ReNight or ReNightdive Wad Manager is a Python-based GUI application designed to help you manage DOOM WAD mods for Nightdive's 'DOOM + DOOM II' KEX 2024 sourceport. This tool provides a user-friendly interface for organizing and importing WAD files, with support for symbolic linking to save disk space.
+ReNight (or ReNightdive Wad Manager) is a Python-based GUI application designed to help you manage DOOM WAD mods for Nightdive's 'DOOM + DOOM II' KEX 2024 sourceport. This tool provides a user-friendly interface for organizing and importing WAD files, with support for symbolic linking to save disk space.
 
 ---
 
@@ -48,83 +48,75 @@ ReNight or ReNightdive Wad Manager is a Python-based GUI application designed to
 3. Extract the contents of the zip file to a folder of your choice.
 4. Run `ReNight.exe` from the extracted folder to start the application.
 
-**Note**: The configuration file (`config.json`) will be created in the same folder as `ReNight.exe` during your first use of the application.
+> **Note**: The configuration file (`config.json`) will be created in the same folder as `ReNight.exe` during your first use of the application.
 
-#### Option 2: Build from Source
+#### Option 2: Run the Python Application Directly
 
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/Retzilience/ReNight.git
-    cd ReNight
-    ```
-
-2. **Set Up a Virtual Environment**:
-    ```bash
-    python -m venv venv
-    ```
-
-3. **Activate the Virtual Environment**:
-   ```bash
-   venv\Scripts\activate
+1. Download and install [Python 3.10.6 or later](https://www.python.org/downloads/).
+2. Clone the repository or download and extract the source code:
+   ```
+   git clone https://github.com/Retzilience/ReNight.git
+   cd ReNight
+   ```
+3. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+4. Run the application directly with:
+   ```
+   python ReNight.pyw
    ```
 
-4. **Install Dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
+#### Option 3: Build from Source
 
-5. **Build the Application with PyInstaller**:
-    ```bash
-    pyinstaller --onefile --windowed --icon=ReNight.ico --add-data "ReNight.ico;." ReNight.pyw
-    ```
-
-6. **Run the Application**:
-   - The executable will be located in the `dist` folder. Run it to start the application:
-     ```bash
-     dist\ReNight.exe
-     ```
+1. Clone the repository and set up a virtual environment as described in Option 2.
+2. Activate the virtual environment:
+   ```
+   venv\Scripts\activate
+   ```
+3. Build the application with PyInstaller:
+   ```
+   pyinstaller --onefile --windowed --icon=ReNight.ico --add-data "ReNight.ico;." ReNight.pyw
+   ```
+4. Run the executable created in the `dist` folder:
+   ```
+   dist\ReNight.exe
+   ```
 
 ### Linux
 
-1. **Install Dependencies**:
-   - Ensure Python 3 and `pip` are installed.
-   - Install the following:
-     ```bash
-     sudo apt update
-     sudo apt install python3 python3-pip python3-venv
-     ```
+#### Option 1: Run the Python Application Directly
 
-2. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/Retzilience/ReNight.git
-    cd ReNight
-    ```
+1. Ensure Python 3 and `pip` are installed:
+   ```
+   sudo apt update
+   sudo apt install python3 python3-pip python3-venv
+   ```
+2. Clone the repository:
+   ```
+   git clone https://github.com/Retzilience/ReNight.git
+   cd ReNight
+   ```
+3. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+4. Run the application directly with:
+   ```
+   python3 ReNight.pyw
+   ```
 
-3. **Set Up a Virtual Environment**:
-    ```bash
-    python3 -m venv venv
-    ```
+#### Option 2: Build from Source
 
-4. **Activate the Virtual Environment**:
-    ```bash
-    source venv/bin/activate
-    ```
-
-5. **Install Python Dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-6. **Build the Application with PyInstaller**:
-    ```bash
-    pyinstaller --onefile --windowed --icon=ReNight.ico --add-data "ReNight.ico:." ReNight.pyw
-    ```
-
-7. **Run the Application**:
-   - The executable will be located in the `dist` folder. Run it to start the application:
-     ```bash
-     ./dist/ReNight
-     ```
+1. Follow the instructions in Option 1 to set up the repository and dependencies.
+2. Build the application with PyInstaller:
+   ```
+   pyinstaller --onefile --windowed --icon=ReNight.ico --add-data "ReNight.ico:." ReNight.pyw
+   ```
+3. Run the executable created in the `dist` folder:
+   ```
+   ./dist/ReNight
+   ```
 
 ---
 
@@ -173,3 +165,5 @@ Made with love, rip and tear by **retzilience**, 2024.
 ---
 
 For updates, see the [GitHub Repository](https://github.com/Retzilience/ReNight).
+
+---
