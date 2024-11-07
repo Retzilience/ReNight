@@ -26,7 +26,8 @@
 
 ### Symlinked Eviternity II Working Example
 
-  ![Game UI](imgs/working_gif)
+  ![Game UI](imgs/working_sl.gif)
+
 
 ---
 
