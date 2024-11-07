@@ -5,6 +5,7 @@ venv/
 build/
 dist/
 *.spec
+Archive/
 
 # Ignore OS-specific or IDE files
 .DS_Store
