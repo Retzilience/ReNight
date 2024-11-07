@@ -1,20 +1,24 @@
+Here’s a refined and reorganized version of your README.md with the Linux release announcement and updated structure for clarity:
+
+---
+
 # ReNightdive Wad Manager
 
 ![ReNight Icon](imgs/ReNight.png)
 
-**ReNight** (or **ReNightdive Wad Manager**) is an open-source, Python-based GUI application that streamlines managing DOOM WAD mods for Nightdive's 'DOOM + DOOM II' KEX 2024 source port. It offers an intuitive interface for organizing and importing WAD files with options for symbolic linking, allowing you to conserve disk space.
+**ReNight** (or **ReNightdive Wad Manager**) is an open-source, Python-based GUI application designed to streamline managing DOOM WAD mods for Nightdive's 'DOOM + DOOM II' KEX 2024 source port. With an intuitive interface, it offers easy organizing and importing of WAD files, along with symbolic linking to conserve disk space.
 
 ---
 
 ## Features
 
-- **Nightdive Folder Selection**: Set the folder where the game loads mods from (default: Nightdive's DOOM mod directory).
+- **Nightdive Folder Selection**: Set the folder where the game loads mods (default: Nightdive's DOOM mod directory).
 - **PWADs Folder Selection**: Choose the folder in which you store your WADs.
-- **Symbolic Link Option**: Optionally create symbolic links for mods instead of copying, saving disk space.
+- **Symbolic Link Option**: Create symbolic links for mods instead of copying, saving disk space.
 - **Batch Import**: Import multiple WADs from a folder in one action.
 - **Console Output**: Real-time console output for feedback and logging.
 - **Mod Management**:
-  - Display mods with prefixes:
+  - Displays mods with prefixes:
     - `(SL)` for symlinked mods
     - `(CPY)` for mods both in the Nightdive and PWADs folders
     - `(ONL)` for mods only in the Nightdive folder.
@@ -24,6 +28,7 @@
 ---
 
 ## Table of Contents
+
 - [Installation](#installation)
   - [Windows](#windows)
   - [Linux](#linux)
@@ -32,6 +37,7 @@
   - [Mod Import Options](#mod-import-options)
   - [Symbolic Linking](#symbolic-linking)
 - [Usage Tips](#usage-tips)
+- [Changelog](#changelog)
 - [License](#license)
 - [Credits](#credits)
 
@@ -44,7 +50,7 @@
 #### Option 1: Download the Latest Release
 
 1. Visit the [ReNightdive Wad Manager Releases](https://github.com/Retzilience/ReNight/releases) page on GitHub.
-2. Download the latest release zip file (e.g., **ReNight-v0.2.0.zip**).
+2. Download the latest release zip file (e.g., **ReNight-v0.02-windows.zip**).
 3. Extract the contents to a folder of your choice.
 4. Run `ReNight.exe` from the extracted folder to start the application.
 
@@ -90,7 +96,25 @@
 
 ### Linux
 
-#### Option 1: Run the Python Application Directly
+#### New: Linux Executable Release!
+
+I'm excited to announce that ReNight now includes a compiled Linux version! The latest build can be downloaded from the **[ReNight GitHub Releases](https://github.com/Retzilience/ReNight/releases/latest)** page.
+
+![Linux UI](imgs/linux_ui.png)
+
+#### Option 1: Download the Compiled Linux Version
+
+1. Download the latest **ReNight-v0.02-linux.tar.gz** file from [GitHub Releases](https://github.com/Retzilience/ReNight/releases/latest).
+2. Extract the contents:
+   ```shell
+   tar -xzvf ReNight-v0.02-linux.tar.gz
+   ```
+3. Run the executable:
+   ```shell
+   ./ReNight
+   ```
+
+#### Option 2: Run the Python Application Directly
 
 1. Ensure Python 3 and `pip` are installed:
    ```shell
@@ -116,18 +140,6 @@
    python3 ReNight.pyw
    ```
 
-#### Option 2: Build from Source
-
-1. Complete the setup in Option 1 to clone the repository, set up a virtual environment, and install dependencies.
-2. Build the application with PyInstaller:
-   ```shell
-   pyinstaller --onefile --windowed --icon=ReNight.ico --add-data "ReNight.ico:." ReNight.pyw
-   ```
-3. Run the executable created in the `dist` folder:
-   ```shell
-   ./dist/ReNight
-   ```
-
 ---
 
 ## Usage
@@ -141,8 +153,6 @@ After launching, the main window provides options to select folders, import WADs
 - **Pick WAD**: Select specific WAD file(s) to import.
 - **Pick Folder (Batch)**: Choose a folder containing multiple WAD files to import them all at once.
 - **Symbolic Link Option**: When checked, WADs are imported as symbolic links rather than being copied to the Nightdive Folder.
-
-![UI](imgs/ui.png) ![Game Screenshot](imgs/game.png)
 
 ### Symbolic Linking
 
@@ -166,36 +176,11 @@ After launching, the main window provides options to select folders, import WADs
 
 ### ReNight - DOOM Wad Manager v0.02
 
-### New Features & Improvements
-
-- **Improved Selection Behavior**:
-  - Users can now switch between "Pick WAD" and "Pick Folder (Batch)" selections seamlessly.
-  - The latest selection takes precedence, enabling better usability without locking options.
-
-- **Dynamic Mod List Updates**:
-  - Mod list updates instantly when any folder path (Nightdive or PWAD) is changed, providing real-time visual feedback.
-
-- **Enhanced Help Documentation**:
-  - Updated help text for clearer instructions on features and mod list labels (`(SL)`, `(CPY)`, `(ONL)`).
-  - Added usage tips and details about limitations with the Nightdive KEX source port.
-
-- **New and Improved App Icon**:
-  - Updated the application icon with a new design, thanks to the contribution from **RataUnderground**.
-
-### Code Clean-Up
-
-- **Removed Unused `webbrowser` Import**:
-  - Removed `webbrowser` and the associated method `open_link`.
-  - Hyperlinks in the help section now open directly through the Qt framework.
-
-### Minor Changes
-
-- **Version Update**:
-  - Updated version number to `v0.02`.
-
-- **Console Output Improvements**:
-  - Enhanced console feedback for import actions and folder updates.
-
+- **Improved Selection Behavior**: Seamless switching between "Pick WAD" and "Pick Folder (Batch)" selections.
+- **Real-Time Mod List Updates**: Immediate visual feedback on folder path changes.
+- **Enhanced Help Documentation**: Clearer instructions and usage tips.
+- **New Application Icon**: A redesigned icon by **RataUnderground**.
+- **Linux Release**: Compiled Linux executable now available!
 
 ---
 
@@ -211,10 +196,10 @@ Made with love, rip and tear by **retzilience**, 2024.
 
 ### Contributors
 
-Thanks for the awesome logo to **RataUnderground**!
+Special thanks to **RataUnderground** for the updated app icon!
 
 ---
 
-For updates, see the [GitHub Repository](https://github.com/Retzilience/ReNight).
+For updates, visit the [GitHub Repository](https://github.com/Retzilience/ReNight).
 
 ---
