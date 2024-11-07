@@ -95,13 +95,13 @@
 
 ### Linux
 
-#### New: Linux Executable Release! (Recommended)
+#### New: Linux Executable Release
 
 I'm excited to announce that ReNight now includes a compiled Linux version! The latest build can be downloaded from the **[ReNight GitHub Releases](https://github.com/Retzilience/ReNight/releases/latest)** page.
 
 ![Linux UI](imgs/linux_ui.png)
 
-#### Option 1: Download the Compiled Linux Version
+#### Option 1: Download the Compiled Linux Version (Recommended)
 
 1. Download the latest **ReNight-v0.02-linux.tar.gz** file from [GitHub Releases](https://github.com/Retzilience/ReNight/releases/latest).
 2. Extract the contents:
