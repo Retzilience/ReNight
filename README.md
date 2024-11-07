@@ -1,6 +1,6 @@
 # ReNightdive Wad Manager
 
-![ReNight Icon](imgs/ReNight.png)
+![ReNight Icon](https://github.com/Retzilience/ReNight/blob/assets/imgs/ReNight.png)
 
 **ReNight** (or **ReNightdive Wad Manager**) is an open-source, Python-based GUI application designed to streamline managing DOOM WAD mods for Nightdive's 'DOOM + DOOM II' KEX 2024 source port. With an intuitive interface, it offers easy organizing and importing of WAD files, along with symbolic linking to conserve disk space.
 
@@ -21,12 +21,14 @@
   - Delete selected mods from the Nightdive folder.
 - **Persistent Configuration**: Save settings like folder paths, window size, and symbolic link preferences.
 
-  ![Windows UI](imgs/ui.png)
-  ![Game UI](imgs/game.png)
+![Windows UI](https://github.com/Retzilience/ReNight/blob/assets/imgs/ui.png)
+![Game UI](https://github.com/Retzilience/ReNight/blob/assets/imgs/game.png)
+
 
 ### Example: Symlinked Eviternity II
 
-  ![Game UI](imgs/working_sl.gif)
+![Game UI](https://github.com/Retzilience/ReNight/blob/assets/imgs/working_sl.gif)
+
 
 
 ---
@@ -109,7 +111,7 @@ I'm excited to announce that ReNight now includes a compiled Linux version! The 
 <details>
   <summary>Click to view Linux UI image</summary>
 
-  ![Linux UI](imgs/linux_ui.png)
+  ![Linux UI](https://github.com/Retzilience/ReNight/blob/assets/imgs/linux_ui.png)
 </details>
 
 #### Option 1: Download the Compiled Linux Version (Recommended)
