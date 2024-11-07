@@ -24,6 +24,10 @@
   ![Windows UI](imgs/ui.png)
   ![Game UI](imgs/game.png)
 
+### Symlinked Eviternity II Working Example
+
+  ![Game UI](imgs/working_gif)
+
 ---
 
 ## Table of Contents
@@ -103,7 +107,7 @@ I'm excited to announce that ReNight now includes a compiled Linux version! The 
 
 <details>
   <summary>Click to view Linux UI image</summary>
-  
+
   ![Linux UI](imgs/linux_ui.png)
 </details>
 
