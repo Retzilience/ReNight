@@ -1,7 +1,3 @@
-Here’s a refined and reorganized version of your README.md with the Linux release announcement and updated structure for clarity:
-
----
-
 # ReNightdive Wad Manager
 
 ![ReNight Icon](imgs/ReNight.png)
