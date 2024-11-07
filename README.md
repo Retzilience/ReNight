@@ -100,6 +100,8 @@
 I'm excited to announce that ReNight now includes a compiled Linux version! The latest build can be downloaded from the **[ReNight GitHub Releases](https://github.com/Retzilience/ReNight/releases/latest)** page.
 
 <details>
+  <summary>Click to view Linux UI image</summary>
+  
   ![Linux UI](imgs/linux_ui.png)
 </details>
 
