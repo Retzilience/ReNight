@@ -25,6 +25,9 @@ Here’s a refined and reorganized version of your README.md with the Linux rele
   - Delete selected mods from the Nightdive folder.
 - **Persistent Configuration**: Save settings like folder paths, window size, and symbolic link preferences.
 
+  ![Windows UI](imgs/UI.png)
+  ![Game UI](imgs/game.png)
+
 ---
 
 ## Table of Contents
