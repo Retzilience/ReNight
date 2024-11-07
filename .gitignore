@@ -6,6 +6,8 @@ build/
 dist/
 *.spec
 Archive/
+wsl_env/
+
 
 # Ignore OS-specific or IDE files
 .DS_Store
