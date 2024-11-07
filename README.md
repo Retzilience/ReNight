@@ -93,6 +93,8 @@
    dist\ReNight.exe
    ```
 
+---
+
 ### Linux
 
 #### New: Linux Executable Release
@@ -141,6 +143,22 @@ I'm excited to announce that ReNight now includes a compiled Linux version! The 
 5. Run the application directly with:
    ```shell
    python3 ReNight.pyw
+   ```
+
+#### Option 3: Build from Source
+
+1. Follow the setup in Option 2 to clone the repository and set up a virtual environment.
+2. Activate the virtual environment:
+   ```shell
+   source venv/bin/activate
+   ```
+3. Build the application with PyInstaller:
+   ```shell
+   pyinstaller --onefile --windowed --icon=ReNight.ico --add-data "ReNight.ico:." ReNight.pyw
+   ```
+4. Run the executable created in the `dist` folder:
+   ```shell
+   ./dist/ReNight
    ```
 
 ---
