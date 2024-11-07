@@ -46,7 +46,7 @@
 
 ### Windows
 
-#### Option 1: Download the Latest Release
+#### Option 1: Download the Latest Release (Recommended)
 
 1. Visit the [ReNightdive Wad Manager Latest Releases](https://github.com/Retzilience/ReNight/releases/latest) page on GitHub.
 2. Download the latest release zip file (e.g., **ReNight-v0.02-windows.zip**).
