@@ -49,7 +49,7 @@ Here’s a refined and reorganized version of your README.md with the Linux rele
 
 #### Option 1: Download the Latest Release
 
-1. Visit the [ReNightdive Wad Manager Releases](https://github.com/Retzilience/ReNight/releases) page on GitHub.
+1. Visit the [ReNightdive Wad Manager Latest Releases](https://github.com/Retzilience/ReNight/releases/latest) page on GitHub.
 2. Download the latest release zip file (e.g., **ReNight-v0.02-windows.zip**).
 3. Extract the contents to a folder of your choice.
 4. Run `ReNight.exe` from the extracted folder to start the application.
