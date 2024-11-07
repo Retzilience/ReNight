@@ -24,7 +24,7 @@
   ![Windows UI](imgs/ui.png)
   ![Game UI](imgs/game.png)
 
-### Symlinked Eviternity II Working Example
+### Example: Symlinked Eviternity II
 
   ![Game UI](imgs/working_sl.gif)
 
