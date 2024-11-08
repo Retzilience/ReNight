@@ -6,7 +6,7 @@
 
 ---
 
-## Download
+## Quick Download
 
 **Windows Version**:  
 [ReNight-v0.02-windows.zip](https://github.com/Retzilience/ReNight/releases/download/v0.02/ReNight-v0.02-windows.zip)
