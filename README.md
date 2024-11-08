@@ -4,6 +4,24 @@
 
 **ReNight** (or **ReNightdive Wad Manager**) is an open-source, Python-based GUI application designed to streamline managing DOOM WAD mods for Nightdive's 'DOOM + DOOM II' KEX 2024 source port. With an intuitive interface, it offers easy organizing and importing of WAD files, along with symbolic linking to conserve disk space.
 
+## Download
+
+---
+
+### **DOWNLOAD**
+
+**Windows Version**:  
+[ReNight-v0.02-windows.zip](https://github.com/Retzilience/ReNight/releases/download/v0.02/ReNight-v0.02-windows.zip)
+
+**Linux Version**:  
+[ReNight-v0.02-linux.tar.gz](https://github.com/Retzilience/ReNight/releases/download/v0.02/ReNight-v0.02-linux.tar.gz)
+
+*Note for Linux users:* Finding the Nightdive folder can be tricky due to Steam Proton's file structure. On Linux, it should look something like this, (replace `(name of your user)` with your actual username):  
+`/home/(name of your user)/.steam/debian-installation/steamapps/compatdata/2280/pfx/dosdevices/c:/users/steamuser/Saved Games/Nightdive Studios/DOOM`. 
+(Thanks RataUnderground for the testing)
+If you are having problems, try launching the game, Mods -> Play -> Open Local Mod Folder to find the correct folder.
+
+
 ---
 
 ## Features
