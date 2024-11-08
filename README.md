@@ -135,8 +135,6 @@ I'm excited to announce that ReNight now includes a compiled Linux version! The 
 
 `/home/(name of your user)/.steam/debian-installation/steamapps/compatdata/2280/pfx/dosdevices/c:/users/steamuser/Saved Games/Nightdive Studios/DOOM`. 
 
-(Thanks RataUnderground for the testing)
-
 If you are having problems, try launching the game, Mods -> Play -> Open Local Mod Folder to find the correct folder.
 
 #### Option 1: Download the Compiled Linux Version (Recommended)
