@@ -17,8 +17,11 @@
 [ReNight-v0.02-linux.tar.gz](https://github.com/Retzilience/ReNight/releases/download/v0.02/ReNight-v0.02-linux.tar.gz)
 
 *Note for Linux users:* Finding the Nightdive folder can be tricky due to Steam Proton's file structure. On Linux, it should look something like this, (replace `(name of your user)` with your actual username):  
+
 `/home/(name of your user)/.steam/debian-installation/steamapps/compatdata/2280/pfx/dosdevices/c:/users/steamuser/Saved Games/Nightdive Studios/DOOM`. 
+
 (Thanks RataUnderground for the testing)
+
 If you are having problems, try launching the game, Mods -> Play -> Open Local Mod Folder to find the correct folder.
 
 
@@ -129,6 +132,14 @@ I'm excited to announce that ReNight now includes a compiled Linux version! The 
 
   ![Linux UI](https://github.com/Retzilience/ReNight/raw/assets/imgs/linux_ui.png)
 </details>
+
+*Note for Linux users:* Finding the Nightdive folder can be tricky due to Steam Proton's file structure. On Linux, it should look something like this, (replace `(name of your user)` with your actual username):  
+
+`/home/(name of your user)/.steam/debian-installation/steamapps/compatdata/2280/pfx/dosdevices/c:/users/steamuser/Saved Games/Nightdive Studios/DOOM`. 
+
+(Thanks RataUnderground for the testing)
+
+If you are having problems, try launching the game, Mods -> Play -> Open Local Mod Folder to find the correct folder.
 
 #### Option 1: Download the Compiled Linux Version (Recommended)
 
