@@ -261,7 +261,7 @@ The commands below assume you are running them from the repository root and that
 - A working C/C++ toolchain
 - Nuitka installed into your build environment
 
-If you ship `requirements-build.txt`, install it in the build venv:
+If you have `requirements-build.txt`, install it in the build venv:
 
 ```shell
 python -m pip install -r requirements-build.txt
