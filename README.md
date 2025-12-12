@@ -5,7 +5,7 @@
 
 **ReNight** (also known as **ReNightdive Wad Manager**) is an open-source GUI application for managing local DOOM `.wad` mods for Nightdive’s **DOOM + DOOM II (KEX 2024)** port.
 
-ReNight exists because the in-game path for loading “local mods” involves uploading them through the game UI. Many users do not want to upload files they did not create, and they want a strictly local workflow. The only purely local alternative is to manually drop WADs into the Nightdive local mod folder and then keep that folder maintained by hand. ReNight provides a standalone, explicit importer and manager that keeps that folder organized using either copies or symbolic links.
+ReNight exists because the in-game path for loading “local mods” involves uploading them through the game UI. Many users do not want to upload files they did not create, and they want a strictly local workflow. The only purely local alternative is to manually drop WADs into the Nightdive local mod folder and then keep that folder maintained by hand. ReNight provides a standalone importer and manager that keeps that folder organized using either copies or symbolic links.
 
 ---
 
@@ -27,13 +27,13 @@ ReNight exists because the in-game path for loading “local mods” involves up
 
 ### Windows
 
-1. Download: [GitHub Releases (latest)](https://github.com/Retzilience/ReNight/releases/latest) (choose the **Windows** `.zip`).
+1. Download from: [GitHub Releases (latest)](https://github.com/Retzilience/ReNight/releases/latest) (choose the **Windows** `.zip`).
 2. Extract the `.zip` anywhere (for example, a folder on your Desktop).
 3. Run `ReNight.exe`.
 
 ### Linux
 
-1. Download: [GitHub Releases (latest)](https://github.com/Retzilience/ReNight/releases/latest) (choose the **Linux** `.tar.gz`).
+1. Download from: [GitHub Releases (latest)](https://github.com/Retzilience/ReNight/releases/latest) (choose the **Linux** `.tar.gz`).
 2. Extract it:
 
    ```shell
@@ -157,13 +157,17 @@ The list supports multi-selection delete. Deleting from ReNight removes entries 
 
 ReNight is developed and packaged with **Python 3.11** as the baseline. Running from source requires Python 3.11+.
 
+The current entry point for running from source is:
+
+- `renight_entry.py`
+
 ### Windows: run from source
 
 1. Install **Python 3.11**.
 2. Install **Git** (optional, but recommended).
 3. Clone the repository:
 
-   ```shell
+   ```powershell
    git clone https://github.com/Retzilience/ReNight.git
    cd ReNight
    ```
@@ -175,21 +179,26 @@ ReNight is developed and packaged with **Python 3.11** as the baseline. Running 
    .\venv\Scripts\Activate.ps1
    ```
 
-   If PowerShell blocks activation scripts, you can run the venv Python directly without activation:
-
-   ```powershell
-   .\venv\Scripts\python.exe -m pip install -U pip
-   .\venv\Scripts\python.exe -m pip install -r requirements.txt
-   .\venv\Scripts\python.exe .\ReNight.pyw
-   ```
-
-5. Install dependencies and run:
+5. Install dependencies:
 
    ```powershell
    python -m pip install -U pip
    python -m pip install -r requirements.txt
-   python .\ReNight.pyw
    ```
+
+6. Run:
+
+   ```powershell
+   python .\renight_entry.py
+   ```
+
+If PowerShell blocks activation scripts, you can run the venv Python directly without activation:
+
+```powershell
+.\venv\Scripts\python.exe -m pip install -U pip
+.\venv\Scripts\python.exe -m pip install -r requirements.txt
+.\venv\Scripts\python.exe .\renight_entry.py
+```
 
 ### Linux: run from source
 
@@ -233,7 +242,7 @@ ReNight is developed and packaged with **Python 3.11** as the baseline. Running 
    ```shell
    python -m pip install -U pip
    python -m pip install -r requirements.txt
-   python ReNight.pyw
+   python ./renight_entry.py
    ```
 
 ---
@@ -251,27 +260,10 @@ The commands below assume you are running them from the repository root and that
 - A working C/C++ toolchain
 - Nuitka installed into your build environment
 
-A typical build environment setup (cross-platform) looks like this:
+If you ship `requirements-build.txt`, install it in the build venv:
 
 ```shell
-python -m venv venv
-```
-
-Windows (PowerShell):
-
-```powershell
-.\venv\Scripts\python.exe -m pip install -U pip
-.\venv\Scripts\python.exe -m pip install -r requirements.txt
-.\venv\Scripts\python.exe -m pip install -U nuitka
-```
-
-Linux:
-
-```shell
-source venv/bin/activate
-python -m pip install -U pip
-python -m pip install -r requirements.txt
-python -m pip install -U nuitka
+python -m pip install -r requirements-build.txt
 ```
 
 ### Windows: build (example command used for releases)
