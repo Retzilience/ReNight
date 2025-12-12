@@ -1,0 +1,10 @@
+# Optional build-time dependencies (not required to run ReNight from source).
+#
+# Install with:
+#   python -m pip install -r requirements-build.txt
+#
+# System packages are still required for compilation:
+# - Windows: a working MinGW64 or MSVC toolchain (depending on your Nuitka flags)
+# - Linux: gcc/g++/make (and whatever Nuitka reports missing)
+
+Nuitka>=2.4
