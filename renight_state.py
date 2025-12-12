@@ -1,4 +1,5 @@
 # renight_state.py
+# not really being used, part of a update staging experiment
 # Non-Qt helpers for reading/writing config state, shared by entry + updater.
 
 from __future__ import annotations
