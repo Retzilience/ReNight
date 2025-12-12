@@ -2,51 +2,46 @@
 
 ![ReNight Icon](https://github.com/Retzilience/ReNight/raw/assets/imgs/ReNight.png)
 
-**ReNight** (or **ReNightdive Wad Manager**) is an open-source, Python-based GUI application designed to streamline managing DOOM WAD mods for Nightdive's 'DOOM + DOOM II' KEX 2024 source port. With an intuitive interface, it offers easy organizing and importing of WAD files, along with symbolic linking to conserve disk space.
+**ReNight** (or **ReNightdive Wad Manager**) is an open-source GUI application for managing local DOOM `.wad` mods for Nightdive’s **DOOM + DOOM II (KEX 2024)** port. It provides a straightforward workflow for importing WADs into the game’s local mod folder using either copying or symbolic linking, and it includes basic mod list management utilities.
 
 ---
 
-## Quick Download
+## Quick Download (v0.3)
 
-**Windows Version**:  
-[ReNight-v0.02-windows.zip](https://github.com/Retzilience/ReNight/releases/download/v0.02/ReNight-v0.02-windows.zip)
+**Windows**  
+https://github.com/Retzilience/ReNight/releases/download/0.3/ReNight_windows_0.3.zip
 
-**Linux Version**:  
-[ReNight-v0.02-linux.tar.gz](https://github.com/Retzilience/ReNight/releases/download/v0.02/ReNight-v0.02-linux.tar.gz)
+**Linux**  
+https://github.com/Retzilience/ReNight/releases/download/0.3/ReNight_linux_0.3.tar.gz
 
-*Note for Linux users:* Finding the Nightdive folder can be tricky due to Steam Proton's file structure. On Linux, it should look something like this, (replace `(name of your user)` with your actual username):  
-
-`/home/(name of your user)/.steam/debian-installation/steamapps/compatdata/2280/pfx/dosdevices/c:/users/steamuser/Saved Games/Nightdive Studios/DOOM`. 
-
-(Thanks RataUnderground for the testing)
-
-If you are having problems, try launching the game, Mods -> Play -> Open Local Mod Folder to find the correct folder.
-
+**All releases**  
+https://github.com/Retzilience/ReNight/releases/latest
 
 ---
 
 ## Features
 
-- **Nightdive Folder Selection**: Set the folder where the game loads mods (default: Nightdive's DOOM mod directory).
-- **PWADs Folder Selection**: Choose the folder in which you store your WADs.
-- **Symbolic Link Option**: Create symbolic links for mods instead of copying, saving disk space.
-- **Batch Import**: Import multiple WADs from a folder in one action.
-- **Console Output**: Real-time console output for feedback and logging.
-- **Mod Management**:
-  - Displays mods with prefixes:
-    - `(SL)` for symlinked mods
-    - `(CPY)` for mods both in the Nightdive and PWADs folders
-    - `(ONL)` for mods only in the Nightdive folder.
-  - Delete selected mods from the Nightdive folder.
-- **Persistent Configuration**: Save settings like folder paths, window size, and symbolic link preferences.
+- **Nightdive Folder selection**: Set the folder where the KEX port loads local mods (ReNight attempts to auto-detect it on first run, including common Steam/Proton layouts).
+- **PWADs Folder selection**: Set a root folder where you keep your WADs for browsing and for improved source matching.
+- **Import modes**:
+  - **Symlink mode**: Create symlinks into the Nightdive folder (saves disk space; requires symlink support on your OS).
+  - **Copy mode**: Copy WADs into the Nightdive folder (does not modify your originals).
+- **Safer copy collision handling**: When importing in copy mode and a filename collision exists with different content, ReNight generates a unique destination name (`name-2.wad`, `name-3.wad`, …) instead of overwriting unrelated files.
+- **Improved mod list UI**: Mods are displayed in a two-column table (filename + status tag). Multi-select delete is supported.
+- **More reliable mod classification**:
+  - `(SL)` for symlink entries.
+  - `(CPY)` for copied entries that can be associated back to a source file (via stored metadata and/or filename+MD5 matching within the PWAD tree).
+  - `(ONL)` for entries that exist only in the Nightdive folder (manual additions, imports from outside the PWAD tree, or missing/moved sources).
+- **Filesystem monitoring**: Watches the Nightdive folder and the selected PWAD folder tree and refreshes the mod list automatically when content changes.
+- **Update checking**: ReNight can compare its version against a small descriptor file and then open either the GitHub Releases page or a direct download link in the system browser. 
+- **Per-user config and state**: Configuration and mod metadata are stored in OS-appropriate per-user locations rather than beside the executable, with automatic migration from legacy side-by-side files on first run.
 
 ![Windows UI](https://github.com/Retzilience/ReNight/raw/assets/imgs/ui.png)
 ![Game UI](https://github.com/Retzilience/ReNight/raw/assets/imgs/game.png)
 
 ### Example: Symlinked Eviternity II
 
-![Game UI](https://github.com/Retzilience/ReNight/raw/assets/imgs/working_sl.gif)
-
+![Symlink Example](https://github.com/Retzilience/ReNight/raw/assets/imgs/working_sl.gif)
 
 ---
 
@@ -59,8 +54,7 @@ If you are having problems, try launching the game, Mods -> Play -> Open Local M
   - [Running the Application](#running-the-application)
   - [Mod Import Options](#mod-import-options)
   - [Symbolic Linking](#symbolic-linking)
-- [Usage Tips](#usage-tips)
-- [Changelog](#changelog)
+- [Notes](#notes)
 - [License](#license)
 - [Credits](#credits)
 
@@ -70,126 +64,108 @@ If you are having problems, try launching the game, Mods -> Play -> Open Local M
 
 ### Windows
 
-#### Option 1: Download the Latest Release (Recommended)
+#### Option 1: Download the latest release (recommended)
 
-1. Visit the [ReNightdive Wad Manager Latest Releases](https://github.com/Retzilience/ReNight/releases/latest) page on GitHub.
-2. Download the latest release zip file (e.g., **ReNight-v0.02-windows.zip**).
-3. Extract the contents to a folder of your choice.
-4. Run `ReNight.exe` from the extracted folder to start the application.
+1. Visit https://github.com/Retzilience/ReNight/releases/latest
+2. Download **ReNight_windows_0.3.zip**
+3. Extract it to a folder of your choice.
+4. Run `ReNight.exe`.
 
-> **Note**: A configuration file (`config.json`) will be created in the same folder as `ReNight.exe` during your first use of the application.
+#### Option 2: Run from source
 
-#### Option 2: Run the Python Application Directly
+1. Install Python 3.10.6+.
+2. Clone the repository:
 
-1. Download and install [Python 3.10.6 or later](https://www.python.org/downloads/).
-2. Clone the repository or download and extract the source code:
-   ```shell
-   git clone https://github.com/Retzilience/ReNight.git
-   cd ReNight
-   ```
-3. Set up a virtual environment and activate it:
-   ```shell
-   python -m venv venv
-   venv\Scripts\activate
-   ```
-4. Install the required dependencies:
-   ```shell
-   pip install -r requirements.txt
-   ```
-5. Run the application directly with:
-   ```shell
-   python ReNight.pyw
-   ```
+```shell
+git clone https://github.com/Retzilience/ReNight.git
+cd ReNight
+```
 
-#### Option 3: Build from Source
+3. Create and activate a virtual environment:
 
-1. Follow the setup in Option 2 to clone the repository and set up a virtual environment.
-2. Activate the virtual environment:
-   ```shell
-   venv\Scripts\activate
-   ```
-3. Build the application with PyInstaller:
-   ```shell
-   pyinstaller --onefile --windowed --icon=ReNight.ico --add-data "ReNight.ico;." ReNight.pyw
-   ```
-4. Run the executable created in the `dist` folder:
-   ```shell
-   dist\ReNight.exe
-   ```
+```shell
+python -m venv venv
+venv\Scripts\activate
+```
+
+4. Install dependencies:
+
+```shell
+pip install -r requirements.txt
+```
+
+5. Run the application:
+
+```shell
+python ReNight.pyw
+```
+
+#### Option 3: Build from source (Nuitka)
+
+As of v0.3, distributed binaries are compiled with **Nuitka** (C compilation).
 
 ---
 
 ### Linux
 
-#### New: Linux Executable Release
+#### Finding the Nightdive folder (Steam/Proton)
 
-I'm excited to announce that ReNight now includes a compiled Linux version! The latest build can be downloaded from the **[ReNight GitHub Releases](https://github.com/Retzilience/ReNight/releases/latest)** page.
+On Linux under Steam/Proton, the Nightdive local mod directory is typically under `compatdata`. A common path layout is:
 
-<details>
-  <summary>Click to view Linux UI image</summary>
+`~/.local/share/Steam/steamapps/compatdata/2280/pfx/drive_c/users/steamuser/Saved Games/Nightdive Studios/DOOM`
 
-  ![Linux UI](https://github.com/Retzilience/ReNight/raw/assets/imgs/linux_ui.png)
-</details>
+If you are having problems, launch the game and use: **Mods → Play → Open Local Mod Folder** to open the correct directory.
 
-*Note for Linux users:* Finding the Nightdive folder can be tricky due to Steam Proton's file structure. On Linux, it should look something like this, (replace `(name of your user)` with your actual username):  
+#### Option 1: Download the compiled release (recommended)
 
-`/home/(name of your user)/.steam/debian-installation/steamapps/compatdata/2280/pfx/dosdevices/c:/users/steamuser/Saved Games/Nightdive Studios/DOOM`. 
+1. Visit https://github.com/Retzilience/ReNight/releases/latest
+2. Download **ReNight_linux_0.3.tar.gz**
+3. Extract:
 
-If you are having problems, try launching the game, Mods -> Play -> Open Local Mod Folder to find the correct folder.
+```shell
+tar -xzvf ReNight_linux_0.3.tar.gz
+```
 
-#### Option 1: Download the Compiled Linux Version (Recommended)
+4. Run:
 
-1. Download the latest **ReNight-v0.02-linux.tar.gz** file from [GitHub Releases](https://github.com/Retzilience/ReNight/releases/latest).
-2. Extract the contents:
-   ```shell
-   tar -xzvf ReNight-v0.02-linux.tar.gz
-   ```
-3. Run the executable:
-   ```shell
-   ./ReNight
-   ```
+```shell
+./ReNight
+```
 
-#### Option 2: Run the Python Application Directly
+#### Option 2: Run from source
 
-1. Ensure Python 3 and `pip` are installed:
-   ```shell
-   sudo apt update
-   sudo apt install python3 python3-pip python3-venv
-   ```
+1. Ensure Python 3 and venv tooling are installed:
+
+```shell
+sudo apt update
+sudo apt install python3 python3-pip python3-venv
+```
+
 2. Clone the repository:
-   ```shell
-   git clone https://github.com/Retzilience/ReNight.git
-   cd ReNight
-   ```
-3. Set up and activate a virtual environment:
-   ```shell
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-4. Install the required dependencies:
-   ```shell
-   pip install -r requirements.txt
-   ```
-5. Run the application directly with:
-   ```shell
-   python3 ReNight.pyw
-   ```
 
-#### Option 3: Build from Source
+```shell
+git clone https://github.com/Retzilience/ReNight.git
+cd ReNight
+```
 
-1. Follow the setup in Option 2 to clone the repository and set up a virtual environment.
-2. Activate the virtual environment:
-   ```shell
-   source venv/bin/activate
-   ```
-3. Build the application with PyInstaller:
-   ```shell
-   pyinstaller --onefile --windowed --icon=ReNight.ico --add-data "ReNight.ico:." ReNight.pyw
-   ```
-4. Run the executable created in the `dist` folder:
-   ```shell
-   ./dist/ReNight
-   ```
+3. Create and activate a virtual environment:
+
+```shell
+python3 -m venv venv
+source venv/bin/activate
+```
+
+4. Install dependencies:
+
+```shell
+pip install -r requirements.txt
+```
+
+5. Run the application:
+
+```shell
+python3 ReNight.pyw
+```
 
 ---
 
@@ -201,56 +177,32 @@ After launching, the main window provides options to select folders, import WADs
 
 ### Mod Import Options
 
-- **Pick WAD**: Select specific WAD file(s) to import.
-- **Pick Folder (Batch)**: Choose a folder containing multiple WAD files to import them all at once.
-- **Symbolic Link Option**: When checked, WADs are imported as symbolic links rather than being copied to the Nightdive Folder.
+- **Pick WAD**: Select one or more WAD files to import.
+- **Pick Folder (Batch)**: Select a folder and import every `.wad` in that directory.
+- **Import**: Creates either symlinks or copies according to your settings.
 
 ### Symbolic Linking
 
-- Enabling this option saves disk space by creating a symbolic link to the file in the Nightdive Folder.
-- Note: Symbolic links may not work on all systems or configurations, so use this option as needed.
+When enabled, ReNight creates a symbolic link inside the Nightdive Folder that points to the original WAD in your PWAD tree. If disabled, ReNight copies the WAD into the Nightdive Folder.
 
 ---
 
-## Usage Tips
+## Notes
 
-1. **Set Your PWADs Folder First**: Setting this allows for accurate detection of copied mods.
-2. **Switch Between Copy and Link Modes**: To change a mod from `(SL)` to `(CPY)` or vice versa, simply re-import it with the desired option.
-3. **Config Persistence**: Folder settings, window size, and symbolic link preferences are saved in `config.json`, persisting between sessions.
-4. **Limitations**:
-   - The application can only load single-WAD mods directly through the Nightdive source port's in-game UI.
-   - `.pk3` files, UDMF, and GZDoom mods are incompatible with the KEX source port.
-
----
-
-## Changelog
-
-### ReNight - DOOM Wad Manager v0.02
-
-- **Improved Selection Behavior**: Seamless switching between "Pick WAD" and "Pick Folder (Batch)" selections.
-- **Real-Time Mod List Updates**: Immediate visual feedback on folder path changes.
-- **Enhanced Help Documentation**: Clearer instructions and usage tips.
-- **New Application Icon**: A redesigned icon by **RataUnderground**.
-- **Linux Release**: Compiled Linux executable now available!
+- The Nightdive KEX in-game UI is limited to single-WAD local mods. Multi-WAD setups still require custom launch methods outside ReNight.
+- Formats not supported by KEX (for example `.pk3` and typical “ZDoom mods”) are not made compatible by ReNight.
+- “Compressed containers” (for example WADs inside `.zip`) are not supported by the KEX local mod loader and therefore are not supported by ReNight.
 
 ---
 
 ## License
 
-This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. For more details, visit [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. For details, visit: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ---
 
 ## Credits
 
-Made with love, rip and tear by **retzilience**, 2024.
+Made by **retzilience**.
 
-### Contributors
-
-Special thanks to **RataUnderground** for the updated app icon!
-
----
-
-For updates, visit the [GitHub Repository](https://github.com/Retzilience/ReNight).
-
----
+Special thanks to **RataUnderground** for the app icon.
