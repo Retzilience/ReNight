@@ -1,6 +1,11 @@
 # ReNight update descriptor
 # version | os | flags... | download_url
 
+0.3   | linux   | stable  | https://github.com/Retzilience/ReNight/releases/download/0.3/ReNight_linux_0.3.tar.gz
+0.3   | windows | stable  | https://github.com/Retzilience/ReNight/releases/download/0.3/ReNight_windows_0.3.zip
+
+
 0.02  | linux   | stable  | https://github.com/Retzilience/ReNight/releases/download/v0.02/ReNight-v0.02-linux.tar.gz
 0.02  | windows | stable  | https://github.com/Retzilience/ReNight/releases/download/v0.02/ReNight-v0.02-windows.zip
 0.1.0 | windows | legacy  | https://github.com/Retzilience/ReNight/releases/download/v0.0.1/ReNight-v0.1.0.zip
+
