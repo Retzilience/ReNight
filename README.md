@@ -9,13 +9,13 @@
 ## Quick Download (v0.3)
 
 **Windows**  
-https://github.com/Retzilience/ReNight/releases/download/0.3/ReNight_windows_0.3.zip
+[ReNight_windows_0.3.zip](https://github.com/Retzilience/ReNight/releases/download/0.3/ReNight_windows_0.3.zip)
 
 **Linux**  
-https://github.com/Retzilience/ReNight/releases/download/0.3/ReNight_linux_0.3.tar.gz
+[ReNight_linux_0.3.tar.gz](https://github.com/Retzilience/ReNight/releases/download/0.3/ReNight_linux_0.3.tar.gz)
 
 **All releases**  
-https://github.com/Retzilience/ReNight/releases/latest
+[GitHub Releases (latest)](https://github.com/Retzilience/ReNight/releases/latest)
 
 ---
 
@@ -33,7 +33,7 @@ https://github.com/Retzilience/ReNight/releases/latest
   - `(CPY)` for copied entries that can be associated back to a source file (via stored metadata and/or filename+MD5 matching within the PWAD tree).
   - `(ONL)` for entries that exist only in the Nightdive folder (manual additions, imports from outside the PWAD tree, or missing/moved sources).
 - **Filesystem monitoring**: Watches the Nightdive folder and the selected PWAD folder tree and refreshes the mod list automatically when content changes.
-- **Update checking**: ReNight can compare its version against a small descriptor file and then open either the GitHub Releases page or a direct download link in the system browser. 
+- **Update checking**: ReNight can compare its version against a small descriptor file and then open either the GitHub Releases page or a direct download link in the system browser.
 - **Per-user config and state**: Configuration and mod metadata are stored in OS-appropriate per-user locations rather than beside the executable, with automatic migration from legacy side-by-side files on first run.
 
 ![Windows UI](https://github.com/Retzilience/ReNight/raw/assets/imgs/ui.png)
@@ -62,53 +62,53 @@ https://github.com/Retzilience/ReNight/releases/latest
 
 ## Installation
 
-### Windows
+## Windows
 
-#### Option 1: Download the latest release (recommended)
+### Option 1: Download the latest release (recommended)
 
-1. Visit https://github.com/Retzilience/ReNight/releases/latest
-2. Download **ReNight_windows_0.3.zip**
+1. Visit [GitHub Releases (latest)](https://github.com/Retzilience/ReNight/releases/latest).
+2. Download [ReNight_windows_0.3.zip](https://github.com/Retzilience/ReNight/releases/download/0.3/ReNight_windows_0.3.zip).
 3. Extract it to a folder of your choice.
 4. Run `ReNight.exe`.
 
-#### Option 2: Run from source
+### Option 2: Run from source
 
 1. Install Python 3.10.6+.
 2. Clone the repository:
 
-```shell
-git clone https://github.com/Retzilience/ReNight.git
-cd ReNight
-```
+    ```shell
+    git clone https://github.com/Retzilience/ReNight.git
+    cd ReNight
+    ```
 
 3. Create and activate a virtual environment:
 
-```shell
-python -m venv venv
-venv\Scripts\activate
-```
+    ```shell
+    python -m venv venv
+    venv\Scripts\activate
+    ```
 
 4. Install dependencies:
 
-```shell
-pip install -r requirements.txt
-```
+    ```shell
+    pip install -r requirements.txt
+    ```
 
 5. Run the application:
 
-```shell
-python ReNight.pyw
-```
+    ```shell
+    python ReNight.pyw
+    ```
 
-#### Option 3: Build from source (Nuitka)
+### Option 3: Build from source (Nuitka)
 
-As of v0.3, distributed binaries are compiled with **Nuitka** (C compilation).
+As of v0.3, distributed binaries are compiled with **Nuitka** (native binaries generated via a C/C++ toolchain).
 
 ---
 
-### Linux
+## Linux
 
-#### Finding the Nightdive folder (Steam/Proton)
+### Finding the Nightdive folder (Steam/Proton)
 
 On Linux under Steam/Proton, the Nightdive local mod directory is typically under `compatdata`. A common path layout is:
 
@@ -116,56 +116,56 @@ On Linux under Steam/Proton, the Nightdive local mod directory is typically unde
 
 If you are having problems, launch the game and use: **Mods → Play → Open Local Mod Folder** to open the correct directory.
 
-#### Option 1: Download the compiled release (recommended)
+### Option 1: Download the compiled release (recommended)
 
-1. Visit https://github.com/Retzilience/ReNight/releases/latest
-2. Download **ReNight_linux_0.3.tar.gz**
+1. Visit [GitHub Releases (latest)](https://github.com/Retzilience/ReNight/releases/latest).
+2. Download [ReNight_linux_0.3.tar.gz](https://github.com/Retzilience/ReNight/releases/download/0.3/ReNight_linux_0.3.tar.gz).
 3. Extract:
 
-```shell
-tar -xzvf ReNight_linux_0.3.tar.gz
-```
+    ```shell
+    tar -xzvf ReNight_linux_0.3.tar.gz
+    ```
 
 4. Run:
 
-```shell
-./ReNight
-```
+    ```shell
+    ./ReNight
+    ```
 
-#### Option 2: Run from source
+### Option 2: Run from source
 
 1. Ensure Python 3 and venv tooling are installed:
 
-```shell
-sudo apt update
-sudo apt install python3 python3-pip python3-venv
-```
+    ```shell
+    sudo apt update
+    sudo apt install python3 python3-pip python3-venv
+    ```
 
 2. Clone the repository:
 
-```shell
-git clone https://github.com/Retzilience/ReNight.git
-cd ReNight
-```
+    ```shell
+    git clone https://github.com/Retzilience/ReNight.git
+    cd ReNight
+    ```
 
 3. Create and activate a virtual environment:
 
-```shell
-python3 -m venv venv
-source venv/bin/activate
-```
+    ```shell
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
 
 4. Install dependencies:
 
-```shell
-pip install -r requirements.txt
-```
+    ```shell
+    pip install -r requirements.txt
+    ```
 
 5. Run the application:
 
-```shell
-python3 ReNight.pyw
-```
+    ```shell
+    python3 ReNight.pyw
+    ```
 
 ---
 
@@ -197,7 +197,7 @@ When enabled, ReNight creates a symbolic link inside the Nightdive Folder that p
 
 ## License
 
-This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. For details, visit: http://creativecommons.org/licenses/by-nc-sa/4.0/
+This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. For details, visit: <http://creativecommons.org/licenses/by-nc-sa/4.0/>
 
 ---
 
