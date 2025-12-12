@@ -1,3 +1,7 @@
+# renight_model.py
+# Only change: remove all update_state/update_* staging fields and their load/save.
+# Everything else is unchanged.
+
 import os
 import json
 import shutil
@@ -40,15 +44,6 @@ class ReNightModel:
         self.last_update_check: float = 0.0
         self.snoozed_version: str = ""
 
-        # Self-updater staging state.
-        self.update_state: str = ""
-        self.update_version: str = ""
-        self.update_old_exe: str = ""
-        self.update_staged_exe: str = ""
-        self.update_stage_dir: str = ""
-        self.update_archive: str = ""
-        self.update_cleanup_exe: str = ""
-
         self._load_config()
         self._load_mod_metadata()
 
@@ -80,28 +75,6 @@ class ReNightModel:
                 self.snoozed_version = str(
                     config.get("snoozed_version", self.snoozed_version)
                 )
-
-                self.update_state = str(
-                    config.get("update_state", self.update_state)
-                )
-                self.update_version = str(
-                    config.get("update_version", self.update_version)
-                )
-                self.update_old_exe = os.path.normpath(
-                    config.get("update_old_exe", self.update_old_exe)
-                )
-                self.update_staged_exe = os.path.normpath(
-                    config.get("update_staged_exe", self.update_staged_exe)
-                )
-                self.update_stage_dir = os.path.normpath(
-                    config.get("update_stage_dir", self.update_stage_dir)
-                )
-                self.update_archive = os.path.normpath(
-                    config.get("update_archive", self.update_archive)
-                )
-                self.update_cleanup_exe = os.path.normpath(
-                    config.get("update_cleanup_exe", self.update_cleanup_exe)
-                )
             except Exception as e:
                 print(f"Error loading config: {e}")
 
@@ -112,13 +85,6 @@ class ReNightModel:
             "symlink_option": bool(self.symlink_option),
             "last_update_check": float(self.last_update_check),
             "snoozed_version": self.snoozed_version,
-            "update_state": self.update_state,
-            "update_version": self.update_version,
-            "update_old_exe": os.path.normpath(self.update_old_exe),
-            "update_staged_exe": os.path.normpath(self.update_staged_exe),
-            "update_stage_dir": os.path.normpath(self.update_stage_dir),
-            "update_archive": os.path.normpath(self.update_archive),
-            "update_cleanup_exe": os.path.normpath(self.update_cleanup_exe),
         }
 
         config_path = self._get_config_path()

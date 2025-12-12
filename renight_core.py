@@ -3,7 +3,7 @@ import sys
 import hashlib
 import shutil
 
-VERSION = "0.3"
+VERSION = "0.1a"
 
 CONFIG_FILE = "ReNight_config.json"
 MOD_DB_FILE = "ReNight_mods.json"
