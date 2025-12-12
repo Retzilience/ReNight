@@ -36,7 +36,7 @@
 - **Update checking**: ReNight can compare its version against a small descriptor file and then open either the GitHub Releases page or a direct download link in the system browser.
 - **Per-user config and state**: Configuration and mod metadata are stored in OS-appropriate per-user locations rather than beside the executable, with automatic migration from legacy side-by-side files on first run.
 
-![Windows UI](https://github.com/Retzilience/ReNight/raw/assets/imgs/ui.png)
+![Windows UI](https://github.com/Retzilience/ReNight/raw/assets/imgs/ui_v03.png)
 ![Game UI](https://github.com/Retzilience/ReNight/raw/assets/imgs/game.png)
 
 ### Example: Symlinked Eviternity II
