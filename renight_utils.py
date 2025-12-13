@@ -1,8 +1,7 @@
 # renight_utils.py
 # External URL opener with Linux, so when binaries are compiled
 #     they (mostly) avoid LD_LIBRARY_PATH issues with Qt / KDE
-#     while opening hyperlinks. tbfh this is the best I can 
-#     ship you without going crazy. ¯\_(ツ)_/¯
+#     while opening hyperlinks. ¯\_(ツ)_/¯
 
 from __future__ import annotations
 
