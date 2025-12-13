@@ -1,5 +1,6 @@
 # renight_utils.py
-# External URL opener with Linux, so when binaries are compiled they don't bug out with KDE opening Qt links. ¯\_(ツ)_/¯ 
+# External URL opener with Linux, so when binaries are compiled they 
+#     don't bug out with KDE opening Qt links. ¯\_(ツ)_/¯ 
 
 from __future__ import annotations
 
