@@ -4,7 +4,7 @@
 #     while opening hyperlinks. Still, as written, a 
 #     failure to open the URL can result in no visible
 #     effect and no diagnostic output. tbfh this is the
-#     best I can ship you, without going crazy. ¯\_(ツ)_/¯
+#     best I can ship you without going crazy. ¯\_(ツ)_/¯
 
 from __future__ import annotations
 
