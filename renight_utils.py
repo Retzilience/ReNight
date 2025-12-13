@@ -1,6 +1,10 @@
 # renight_utils.py
-# External URL opener with Linux, so when binaries are compiled they 
-#     don't bug out with KDE opening Qt links. ¯\_(ツ)_/¯ 
+# External URL opener with Linux, so when binaries are compiled 
+#     they (mostly) avoid LD_LIBRARY_PATH issues with Qt / KDE 
+#     while opening hyperlinks. Still, as written, a 
+#     failure to open the URL can result in no visible
+#     effect and no diagnostic output. tbfh this is the
+#     best I can ship you, without going crazy. ¯\_(ツ)_/¯
 
 from __future__ import annotations
 
