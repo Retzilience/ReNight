@@ -1,6 +1,8 @@
 # renight_state.py
 # Non-Qt helpers for reading/writing config state, shared by entry + updater.
 
+# As of version 0.3, I don't think this module is being used at all anywhere in the program.
+
 from __future__ import annotations
 
 import json
