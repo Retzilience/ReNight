@@ -85,7 +85,6 @@ def open_url_external(url: Union[str, QUrl]) -> None:
     if sys.platform.startswith("linux"):
         env = _sanitized_env_for_external_open()
 
-        # Prefer xdg-open, then try gio open (common on GNOME-based systems).
         candidates: list[list[str]] = [
             ["xdg-open", url_str],
             ["gio", "open", url_str],
